@@ -14,7 +14,8 @@
 }
 
 .App-header {
-  background-image:url(https://www.shutterstock.com/image-photo/crime-scene-dramatic-lighting-600nw-737328646.jpg);
+  background-image:url(https://media.istockphoto.com/id/1160294015/vector/warning-tape-black-and-yellow-line-striped-vector-illustration.jpg?s=612x612&w=0&k=20&c=A2EC0GDKrA00u7dtFyx4fduoQeGromNVlbFPuI65kfc=);
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,3 +46,4 @@
     transform: rotate(360deg);
   }
 }
+
