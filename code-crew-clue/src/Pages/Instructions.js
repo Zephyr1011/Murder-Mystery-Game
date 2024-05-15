@@ -1,6 +1,8 @@
+import "./Instructions.css"
+
 export function Instructions() {
     return(
-    <div>
+    <div className="Instructions">
         <h1>
             How To Play!
         </h1>
@@ -12,3 +14,4 @@ export function Instructions() {
     </div>
     )
 }
+
