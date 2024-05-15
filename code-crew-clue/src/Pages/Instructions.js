@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export function Instructions() {
     return(
         <h1>

@@ -6,6 +6,7 @@ import { Suspects } from './Pages/Suspects';
 import{HashRouter,Routes,Route} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Home } from './Pages/Hpme';
+
 function App() {
   return (
     
@@ -22,10 +23,11 @@ function App() {
         >
           </a>
           
-          
+          <Link to="/Suspects">
         <Button variant="warning" size='lg' style={{fontSize: "2rem"}}>
           Start!
         </Button>{' '}
+        </Link>
         <Link to="/Instructions">
         <Button variant="warning" size='lg' style={{fontSize: "2rem"}}>
           How To Play!
