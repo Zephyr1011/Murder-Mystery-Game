@@ -1,0 +1,23 @@
+.game-container{
+    background-color: #082149;
+    background-size: cover;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    color:white;
+}
+
+.button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Center-align text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+  }
+
+  

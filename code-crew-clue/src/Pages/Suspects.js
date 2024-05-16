@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
+import './Suspects.css';
+
 
 const suspects = [
     {
@@ -45,15 +47,15 @@ const suspects = [
 function Suspect() {
   return (
 
-    <div className="container">
+    <div className="suspects-container">
       <h1>Suspects</h1>
       <div className="row">
         {suspects.map((suspect, index) => (
           <div className="col-md-4" key={index}>
-            <div className="card mb-4">
+            <div className="card mb-3">
               <img src={suspect.photo} className="card-img-top" alt={suspect.name} />
               <div className="card-body">
-                <h5 className="card-title">{suspect.name}</h5>
+                <h5 className="card-title"><strong>Name: </strong>{suspect.name}</h5>
                 <p className="card-text"><strong>Motive:</strong> {suspect.motive}</p>
                 <p className="card-text"><strong>Weapon of Choice:</strong> {suspect.weapon}</p>
               </div>

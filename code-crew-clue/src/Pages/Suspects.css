@@ -1,0 +1,30 @@
+.suspects-container{
+background-color: #082149;
+text-align: center;
+text-shadow: 2px 2px 4px black;
+color:white;
+
+}
+
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('');
+    }
+
+.card{
+background-color: #fec526;
+color:white;
+padding: 10px;
+border-radius: 20px;
+text-align: center;
+text-shadow:black;
+}
+
+.card-text{
+    text-shadow:2px 2px 4px black;
+}
+
+.h1{
+    text-align: center;
+    color:white
+}
