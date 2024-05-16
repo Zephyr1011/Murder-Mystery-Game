@@ -6,7 +6,7 @@ const port = 3000;
 const mongoose = require('mongoose');
 app.use(cors());
 
-const Suspects = new mongoose.Schema(
+const Suspects = new mongoose.Schema(//Making the moongoose template for the data
     {
         name: String,
         photo: String,
@@ -25,8 +25,8 @@ const Suspects1 = new mongoose.model('Suspects',Suspects);
    await mongoose.connect('mongodb+srv://quincymalone101:Marshadow101@chocalatecluster.ba2dcss.mongodb.net/CodeCrewClue');
 
    console.log(mongoose.Collection.name);
-    const query = await Suspects1.findOne({name:"Shakyra"});
-    console.log(query);
+    const query = await Suspects1.findOne({name:"Shakyra"});//Specifying which suspect we want to get the clues for
+    console.log(query);//getting the clues
     clues[0] = query.clue1 
     clues[1] = query.clue2 
     clues[2] = query.clue3 
@@ -35,7 +35,7 @@ const Suspects1 = new mongoose.model('Suspects',Suspects);
     mongoose.disconnect();
 }
 const clues = [];
-app.get('/api/clues', async (req, res) => {
+app.get('/api/clues', async (req, res) => {//sending the clues to the api link
     await getClues();
     res.json(clues);
 });
