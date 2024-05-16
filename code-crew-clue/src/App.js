@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './App.css';
 import { Button } from 'react-bootstrap';
 
+//show prompt window and store value
+var Players = prompt ("what is your username");
 
 function App() {
   return (
