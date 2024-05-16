@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';/*managing state and side effects*/
+import React, { useState, useEffect } from 'react';/*import react package and managing state and side effects*/
 import './Game.css';/*import game styling*/
 
 function Game() {/*main component is game*/
@@ -20,22 +20,22 @@ function Game() {/*main component is game*/
 
   const generateRandomClues = (clues) => {
     const shuffledClues = clues.sort(() => 0.5 - Math.random());
-    setRandomClues(shuffledClues.slice(0, 5));
+    setRandomClues(shuffledClues.slice(0, 5));/*shuffles clues and picks first 5 to display*/
   };
 
-  const handleGuess = (murderer) => {
-    setGuessCount(prevCount => prevCount + 1);
-    if (guessCount < 2) {
+  const handleGuess/*component*/ = (murderer) => {
+    setGuessCount(prevCount => prevCount + 1); /*when user makes a guess it increases by 1*/
+    if (guessCount < 2) { /*if guess is less than 2 it adds another another guess count*/
       setUserGuesses(prevGuesses => [...prevGuesses, murderer]);
-      if (murderer === 'Shakyra') {
+      if (murderer === 'Shakyra') { /*if the guess is Shakyra it renders winner and redirects to results page*/
         localStorage.setItem('result', 'winner');
         window.location.href = '/result'; // Redirect to result page
-      } else if (guessCount === 1) {
+      } else if (guessCount === 1) {  /*If the guess is wrong and it’s the user's second guess it saves loser in local storage and redirects to a result page*/
         localStorage.setItem('result', 'loser');
         window.location.href = '/result'; // Redirect to result page
       }
     } else {
-      localStorage.setItem('result', 'loser');
+      localStorage.setItem('result', 'loser');/*If the guess count is 2 or more, it saves "loser" in local storage and redirects to a result*/
       window.location.href = '/result'; // Redirect to result page
     }
   };
@@ -47,13 +47,13 @@ function Game() {/*main component is game*/
         {randomClues.map((clue, index) => (
           <div key={index}>
             <p>{clue.text}</p>
-          </div>
+          </div>/*this code block takes the array randomClues and maps each clue object to a div element containing a p element. The p element displays the text of each clue. The div elements are identified using the index of each clue in the array. This is the area where the clues are generated and displayed in the UI.*/
         ))}
       </div>
       <div>
         <h3>Make your guess:</h3>
         {clues.map((clue, index) => (
-          <button key={index} onClick={() => handleGuess(clue.name)}>{clue.name}</button>
+          <button key={index} onClick={() => handleGuess(clue.name)}>{clue.name}</button> /*button to generate random clues*/
         ))}
       </div>
     </div>
@@ -66,22 +66,13 @@ export default Game;
 
       
 
-  /*shuffles clues and picks first 5 to display*/
+ 
 
 
-  /*component*/ 
-    /*when user makes a guess it increases by 1*/
-  /*if guess is less than 2 it adds another another guess count*/
+
+    
      
-     /*if the guess is Shakyra it renders winner and redirects to results page*/
-     
-         // Redirect to result page
-  /*If the guess is wrong and it’s the user's second guess it saves loser in local storage and redirects to a result page*/
-       
-   // Redirect to result page
-/*If the guess count is 2 or more, it saves "loser" in local storage and redirects to a result page.8*/
-
-      // Redirect to result page
+    
 
   ;
 
