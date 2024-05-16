@@ -1,4 +1,9 @@
-.Instructions{
-  background-color: rgb(213,214,216);
-  background-size: cover;
-  }
+.instructions-container{
+ background-color: #082149;
+background-size: cover;
+text-align: center;
+text-shadow: 2px 2px 4px black;
+color:white;
+
+}
+

@@ -1,0 +1,30 @@
+.game-container{
+    background-color: #082149;
+    background-size: cover;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    color:white;
+}
+
+#clue-container {
+    margin-bottom: 20px; 
+  }
+
+.button {
+    background-color: #019a16;
+    border: none; 
+    color: white; 
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 8px; 
+  }
+
+  button:hover {
+    background-color: #019a16;
+  }
+  
